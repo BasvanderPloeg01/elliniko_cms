@@ -127,8 +127,8 @@
             </ul>
         </div>
         <!-- /col-3 -->
-        
-        <!-- content -->
+
+        @yield('content')
         
         <!--/col-span-9-->
     </div>
