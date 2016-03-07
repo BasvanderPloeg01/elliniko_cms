@@ -57,7 +57,7 @@
                 <li><a href="#"><i class="glyphicon glyphicon-briefcase"></i> Toolbox</a></li>
                 <li><a href="#"><i class="glyphicon glyphicon-link"></i> Widgets</a></li>
                 <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i> Reports</a></li>
-                <li><a href="#"><i class="glyphicon glyphicon-book"></i> Pages</a></li>
+                <li><a href="{{ url('pages') }}"><i class="glyphicon glyphicon-book"></i> Pages</a></li>
                 <li><a href="#"><i class="glyphicon glyphicon-star"></i> Social Media</a></li>
             </ul>
 

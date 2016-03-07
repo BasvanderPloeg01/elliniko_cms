@@ -8,6 +8,30 @@ use App\Http\Requests;
 
 class PagesController extends Controller {
     public function index() {
-		return view('pages');
+		$directory = '../resources/views/pages';
+
+		if (!is_dir($directory)) {
+			exit('Invalid diretory path');
+		}
+
+		$files = array();
+
+		foreach (scandir($directory) as $file) {
+			if ('.' === $file) {
+				continue;
+			} 
+				
+			if ('..' === $file) {
+				continue;
+			}
+
+			$dot_pos = strpos($file, '.');
+			$temp_file = substr($file, 0, $dot_pos);
+			
+			$files[] = $temp_file;
+		}
+
+
+		return view('pages', compact('files'));
 	}
 }
