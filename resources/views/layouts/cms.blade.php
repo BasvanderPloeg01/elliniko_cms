@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
 </head>
 <body>
 <!-- header -->
@@ -43,10 +44,10 @@
 
 <!-- Main -->
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-3">
+    <div class="row sidebar">
+        <div class="col-sm-3" >
 
-            <a href="#"><strong><i class="glyphicon glyphicon-link"></i> Resources</strong></a>
+
 
             <hr>
 
@@ -140,7 +141,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">ï¿½</button>
                 <h4 class="modal-title">Add Widget</h4>
             </div>
             <div class="modal-body">
