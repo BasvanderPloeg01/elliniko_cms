@@ -33,7 +33,7 @@ Route::group(['middleware' => ['web']], function () {
 Route::group(['middleware' => 'web'], function () {
     // Authentication Routes...
     Route::get('administrator', ['as' => 'auth.administrator', 'uses' => 'Auth\AuthController@showLoginForm']);
-    Route::post('administrator', ['as' => 'auth.administrator', 'uses' => 'Auth\AuthController@login']);
+    Route::post('login', ['as' => 'auth.login', 'uses' => 'Auth\AuthController@login']);
     Route::get('logout', ['as' => 'auth.logout', 'uses' => 'Auth\AuthController@logout']);
 
     // Password Reset Routes...
