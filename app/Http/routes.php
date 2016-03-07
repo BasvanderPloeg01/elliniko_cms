@@ -32,9 +32,9 @@ Route::group(['middleware' => ['web']], function () {
 
 Route::group(['middleware' => 'web'], function () {
     // Authentication Routes...
-    $this->get('login', 'Auth\AuthController@showLoginForm');
-    $this->post('login', 'Auth\AuthController@login');
-    $this->get('logout', 'Auth\AuthController@logout');
+    Route::get('administrator', ['as' => 'auth.administrator', 'uses' => 'Auth\AuthController@showLoginForm']);
+    Route::post('administrator', ['as' => 'auth.administrator', 'uses' => 'Auth\AuthController@login']);
+    Route::get('logout', ['as' => 'auth.logout', 'uses' => 'Auth\AuthController@logout']);
 
     // Password Reset Routes...
     $this->get('password/reset/{token?}', 'Auth\PasswordController@showResetForm');
