@@ -32,7 +32,7 @@ Route::group(['middleware' => ['web']], function () {
 
 Route::group(['middleware' => 'web'], function () {
     // Authentication Routes...
-    Route::get('administrator', ['as' => 'auth.administrator', 'uses' => 'Auth\AuthController@showLoginForm']);
+    Route::get('login', ['as' => 'auth.login', 'uses' => 'Auth\AuthController@showLoginForm']);
     Route::post('login', ['as' => 'auth.login', 'uses' => 'Auth\AuthController@login']);
     Route::get('logout', ['as' => 'auth.logout', 'uses' => 'Auth\AuthController@logout']);
 
