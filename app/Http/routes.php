@@ -1,6 +1,5 @@
 <?php
 
-
 Route::get('/', function () {
     return view('pages/welcome');
 });
@@ -15,6 +14,8 @@ Route::group(['middleware' => ['web']], function () {
     $this->get('password/reset/{token?}', 'Auth\PasswordController@showResetForm');
     $this->post('password/email', 'Auth\PasswordController@sendResetLinkEmail');
     $this->post('password/reset', 'Auth\PasswordController@reset');
+
+    $this->post('add_page', 'AddPageController@add_page');
 
     Route::get('/home', 'HomeController@index');
     Route::get('/pages', 'PagesController@index');
