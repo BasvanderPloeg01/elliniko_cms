@@ -18,7 +18,18 @@ class AddPageController extends Controller {
        }
 
        $page = $request->input('page_name');
-       fopen('../resources/views/'.$page.'.blade.php', 'w') or die('Could not create page');
+       $file = fopen('../resources/views/pages/'.$page.'.blade.php', 'w') or die('Could not create page');
+       fwrite($file, '@extends(\'layouts.cms\')
+
+@section(\'content\')
+
+<div class="container content">
+    <div class="row">'.
+        $request->input('page_content')
+    .'</div>
+</div>
+
+@endsection');
 
        var_dump($request->all());
     }
