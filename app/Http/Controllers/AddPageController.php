@@ -17,6 +17,9 @@ class AddPageController extends Controller {
            // error handler
        }
 
+       $page = $request->input('page_name');
+       fopen('../resources/views/'.$page.'.blade.php', 'w') or die('Could not create page');
+
        var_dump($request->all());
     }
 }
