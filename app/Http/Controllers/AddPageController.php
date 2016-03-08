@@ -31,6 +31,17 @@ class AddPageController extends Controller {
 
 @endsection');
 
+       $routes_file = '../app/Http/routes.php';
+       $routes_content = file_get_contents($routes_file);
+
+       $routes_content .= '
+Route::get(\'/'.$request->input('page_name').'\', function () {
+    return view(\'pages/'.$request->input('page_name').'\');
+});
+';
+
+       file_put_contents($routes_file, $routes_content);
+
        var_dump($request->all());
     }
 }
