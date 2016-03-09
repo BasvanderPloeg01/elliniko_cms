@@ -19,7 +19,7 @@ class AddPageController extends Controller {
 
        $page = $request->input('page_name');
        $file = fopen('../resources/views/pages/'.$page.'.blade.php', 'w') or die('Could not create page');
-       fwrite($file, '@extends(\'layouts.cms\')
+       fwrite($file, '@extends(\'layouts.app\')
 
 @section(\'content\')
 
@@ -31,17 +31,33 @@ class AddPageController extends Controller {
 
 @endsection');
 
+        // controller
+        $controller_content = '<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+use App\Http\Requests;
+
+class '.$request->input('page_name').'Controller extends Controller {
+    public function index() {
+		return view(\'pages/'.$request->input('page_name').'\');
+	}
+}
+';
+
+       $file = fopen('../app/Http/Controllers/'.$request->input('page_name').'Controller.php', 'w') or die('Could not create page');
+       fwrite($file, $controller_content);
+
        $routes_file = '../app/Http/routes.php';
        $routes_content = file_get_contents($routes_file);
 
        $routes_content .= '
-Route::get(\'/'.$request->input('page_name').'\', function () {
-    return view(\'pages/'.$request->input('page_name').'\');
-});
-';
+Route::get(\'/'.$request->input('page_name').'\', \''.$request->input('page_name').'Controller@index\');';
 
        file_put_contents($routes_file, $routes_content);
 
-       var_dump($request->all());
+       return redirect($request->input('page_name'));
     }
 }
