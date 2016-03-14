@@ -17,7 +17,7 @@ Route::group(['middleware' => ['web']], function () {
 
     $this->post('add_page', 'AddPageController@add_page');
 
-    Route::get('/home', 'HomeController@index');
+    Route::get('/dashboard', 'DashboardController@index');
     Route::get('/pages', 'PagesController@index');
     Route::get('/add_page', 'AddPageController@index');
 
