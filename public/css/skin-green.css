@@ -3,7 +3,7 @@
  * -----------
  */
 .skin-green .main-header .navbar {
-  background-color: #00BB8C;
+  background-color: #2B3936;
 }
 .skin-green .main-header .navbar .nav > li > a {
   color: #ffffff;
@@ -29,7 +29,7 @@
   color: #fff;
 }
 .skin-green .main-header .navbar .sidebar-toggle:hover {
-  background-color: #00926D;
+  background-color: #2B3936;
 }
 @media (max-width: 767px) {
   .skin-green .main-header .navbar .dropdown-menu li.divider {
@@ -39,16 +39,16 @@
     color: #fff;
   }
   .skin-green .main-header .navbar .dropdown-menu li a:hover {
-    background: #00926D;
+    background: #2B3936;
   }
 }
 .skin-green .main-header .logo {
-  background-color: #00926D;
+  background-color: #1C2926;
   color: #ffffff;
   border-bottom: 0 solid transparent;
 }
 .skin-green .main-header .logo:hover {
-  background-color: #00926D;
+  background-color: #1C2926;
 }
 .skin-green .main-header li.user-header {
   background-color: #2B3936;

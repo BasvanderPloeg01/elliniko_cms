@@ -16,7 +16,7 @@
     <link href="./css/stylesheet.css" rel="stylesheet">
     <link href="./css/skin-green.css" rel="stylesheet">
 </head>
-<body class="hold-transition skin-green sidebar-collapse sidebar-mini">
+<body class="hold-transition skin-green sidebar-mini">
 <!-- header -->
 <div class="wrapper">
     <!-- Main Header -->
@@ -40,48 +40,48 @@
                     <!-- Messages: style can be found in dropdown.less-->
                     <!--TODO: remove style Notifications Menu-->
                     <!-- User Account Menu -->
-                    <li class="dropdown user user-menu">
-                        <!-- Menu Toggle Button -->
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <!-- The user image in the navbar-->
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Mark_Zuckerberg_at_the_37th_G8_Summit_in_Deauville_018_v1.jpg" class="user-image" alt="User Image">
-                            <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                            <span><i class="fa fa-user"></i></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <!-- The user image in the menu -->
-                            <li class="user-header">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Mark_Zuckerberg_at_the_37th_G8_Summit_in_Deauville_018_v1.jpg" class="img-circle" alt="User Image">
-                                <p>
-                                    <small>Join Date</small>
-                                </p>
-                            </li>
-                            <!-- Menu Body -->
-                            <li class="user-body">
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">Followers</a>
-                                </div>
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">Unfollow</a>
-                                </div>
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">Friends</a>
-                                </div>
-                            </li>
-                            <!-- Menu Footer-->
-                            <li class="user-footer">
-                                <div class="pull-left">
-                                    <a href="" class="btn btn-success">Profile</a>
-                                </div>
-                                <div class="pull-right">
+                    {{--<li class="dropdown user user-menu">--}}
+                        {{--<!-- Menu Toggle Button -->--}}
+                        {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown">--}}
+                            {{--<!-- The user image in the navbar-->--}}
+                            {{--<img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Mark_Zuckerberg_at_the_37th_G8_Summit_in_Deauville_018_v1.jpg" class="user-image" alt="User Image">--}}
+                            {{--<!-- hidden-xs hides the username on small devices so only the image appears. -->--}}
+                            {{--<span><i class="fa fa-user"></i></span>--}}
+                        {{--</a>--}}
+                        {{--<ul class="dropdown-menu">--}}
+                            {{--<!-- The user image in the menu -->--}}
+                            {{--<li class="user-header">--}}
+                                {{--<img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Mark_Zuckerberg_at_the_37th_G8_Summit_in_Deauville_018_v1.jpg" class="img-circle" alt="User Image">--}}
+                                {{--<p>--}}
+                                    {{--<small>Join Date</small>--}}
+                                {{--</p>--}}
+                            {{--</li>--}}
+                            {{--<!-- Menu Body -->--}}
+                            {{--<li class="user-body">--}}
+                                {{--<div class="col-xs-4 text-center">--}}
+                                    {{--<a href="#">Followers</a>--}}
+                                {{--</div>--}}
+                                {{--<div class="col-xs-4 text-center">--}}
+                                    {{--<a href="#">Unfollow</a>--}}
+                                {{--</div>--}}
+                                {{--<div class="col-xs-4 text-center">--}}
+                                    {{--<a href="#">Friends</a>--}}
+                                {{--</div>--}}
+                            {{--</li>--}}
+                            {{--<!-- Menu Footer-->--}}
+                            {{--<li class="user-footer">--}}
+                                {{--<div class="pull-left">--}}
+                                    {{--<a href="" class="btn btn-success">Profile</a>--}}
+                                {{--</div>--}}
+                                {{--<div class="pull-right">--}}
 
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
+                                {{--</div>--}}
+                            {{--</li>--}}
+                        {{--</ul>--}}
+                    {{--</li>--}}
                     <!-- Control Sidebar Toggle Button -->
                     <li>
-                        <a href="#" data-toggle="control-sidebar"><i class="fa fa-bell-o"></i><span class="label label-success"></span></a>
+                        <a href="#" data-toggle="control-sidebar"><i class="fa fa-cog"></i><span class="label label-success"></span></a>
                     </li>
                 </ul>
             </div>
@@ -92,17 +92,17 @@
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
             <!-- Sidebar user panel (optional) -->
-            <div class="user-panel">
-                <div class="pull-left image">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Mark_Zuckerberg_at_the_37th_G8_Summit_in_Deauville_018_v1.jpg" class="img-circle" alt="User Image">
-                </div>
-                <div class="pull-left info">
-                    <p>Username</p>
-                    <!-- Status -->
-                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-                    <p>Level: 200</p>
-                </div>
-            </div>
+            {{--<div class="user-panel">--}}
+                {{--<div class="pull-left image">--}}
+                    {{--<img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Mark_Zuckerberg_at_the_37th_G8_Summit_in_Deauville_018_v1.jpg" class="img-circle" alt="User Image">--}}
+                {{--</div>--}}
+                {{--<div class="pull-left info">--}}
+                    {{--<p>Username</p>--}}
+                    {{--<!-- Status -->--}}
+                    {{--<a href="#"><i class="fa fa-circle text-success"></i> Online</a>--}}
+                    {{--<p>Level: 200</p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
 
             <!-- search form (Optional) -->
             <form action="#" method="get" class="sidebar-form">
@@ -117,15 +117,14 @@
                     <!-- Sidebar Menu -->
             <ul class="sidebar-menu">
                 <li class="header">Menu</li>
+                <li><a href="{{ url('home') }}"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href=""><i class="fa fa-file-text"></i> <span>Pagination</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="#">Link in level 2</a></li>
-                        <li><a href="#">Link in level 2</a></li>
+                        <li><a href="{{ url('pages') }}"><i class="fa fa-file"></i>Pages</a></li>
+                        <li><a href="{{ url('add_page') }}"><i class="fa fa-plus"></i>Add page</a></li>
                     </ul>
                 </li>
-                <li><a href=""><i class="fa fa-user-plus"></i> <span>New page</span></a></li>
-                <li><a href=""><i class="fa fa-user-plus"></i> <span>Register</span></a></li>
             </ul><!-- /.sidebar-menu -->
         </section>
         <!-- /.sidebar -->
@@ -148,18 +147,10 @@
         <div class="tab-content">
             <!-- Home tab content -->
             <div class="tab-pane active" id="control-sidebar-home-tab">
-                <h3 class="control-sidebar-heading">Level: 200</h3>
                 <ul class="control-sidebar-menu">
                     <li>
-
-                        <a href="javascript::;">
-                            <h4 class="control-sidebar-subheading">
-                                Your experience!
-                                <span class="label label-success pull-right">%</span>
-                            </h4>
-                            <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-success" style="width: 10%"></div>
-                            </div>
+                        <a href="{{ url('logout') }}">
+                            Logout    
                         </a>
                     </li>
                 </ul><!-- /.control-sidebar-menu -->
