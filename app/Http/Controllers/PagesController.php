@@ -41,6 +41,7 @@ class PagesController extends Controller {
 
 	public function delete_page(Request $request) {
 		$pages = array();
+		$routes_file = '../app/Http/routes.php';
 
 		if (!empty($request->all())) {
 			foreach ($request->all() as $res) {
@@ -58,8 +59,16 @@ class PagesController extends Controller {
 						$view = '../resources/views/pages/'.$pages[$ii].'.blade.php';
 						$controller = '../app/Http/Controllers/'.$pages[$ii].'Controller.php';
 
+						// Removes the view
 						unlink($view);
+
+						// Removes the controller
 						unlink($controller);
+
+						// Removes the route from Routes.php
+						$route = "Route::get('/$pages[$ii]', '$pages[$ii]Controller@index');";
+						$new_routes = str_replace($route, "", file_get_contents($routes_file));
+						file_put_contents($routes_file, $new_routes);
 					}
 				}
 
