@@ -20,4 +20,6 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/home', 'HomeController@index');
     Route::get('/pages', 'PagesController@index');
     Route::get('/add_page', 'AddPageController@index');
+
+    Route::post('pages', 'PagesController@delete_page');
 });

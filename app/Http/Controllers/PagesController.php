@@ -38,4 +38,35 @@ class PagesController extends Controller {
 
 		return view('pages', compact('files'));
 	}
+
+	public function delete_page(Request $request) {
+		$pages = array();
+
+		if (!empty($request->all())) {
+			foreach ($request->all() as $res) {
+				if (strstr($res, 'file')) {
+					$temp = str_split($res);
+					$last_char = count($temp)-1;
+
+					$pages[] = substr($res, 5, $last_char);
+				}
+			}
+
+			if (!empty($pages)) {
+				for ($ii = 0; $ii < count($pages); $ii++) {
+					if ($request->input("delete_".$pages[$ii]) == 'on') {
+						$view = '../resources/views/pages/'.$pages[$ii].'.blade.php';
+						$controller = '../app/Http/Controllers/'.$pages[$ii].'Controller.php';
+
+						unlink($view);
+						unlink($controller);
+					}
+				}
+
+				return redirect('pages');
+			} else {
+				return redirect('pages');
+			}
+		}
+	}
 }
