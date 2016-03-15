@@ -35,7 +35,6 @@ class PagesController extends Controller {
 			$files[] = $temp_file;
 		}
 
-
 		return view('pages', compact('files'));
 	}
 

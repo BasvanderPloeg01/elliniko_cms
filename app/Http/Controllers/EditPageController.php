@@ -35,6 +35,7 @@ class EditPageController extends Controller {
 </div>
 
 @endsection');
+
         return redirect($page);
     }
 }

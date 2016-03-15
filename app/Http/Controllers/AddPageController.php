@@ -23,7 +23,7 @@ class AddPageController extends Controller {
 
        $page = $request->input('page_name');
        $file = fopen('../resources/views/pages/'.$page.'.blade.php', 'w') or die('Could not create page');
-       fwrite($file, '@extends(\'layouts.app\')i
+       fwrite($file, '@extends(\'layouts.app\')
 
 @section(\'content\')
 
