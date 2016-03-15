@@ -69,6 +69,12 @@ class PagesController extends Controller {
 						$route = "Route::get('/$pages[$ii]', '$pages[$ii]Controller@index');";
 						$new_routes = str_replace($route, "", file_get_contents($routes_file));
 						file_put_contents($routes_file, $new_routes);
+
+//						$layout_file = "../resources/views/layouts/app.blade.php";
+//						$layout = file_get_contents($layout_file);
+//						
+//						$new_layout = str_replace("<li><a href=\"{{ url('$pages[$ii]') }}\">$pages[$ii]</a></li>", "", $layout);
+//						file_put_contents($layout, $new_layout);
 					}
 				}
 

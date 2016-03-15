@@ -61,7 +61,15 @@ class '.$request->input('page_name').'Controller extends Controller {
 Route::get(\'/'.$request->input('page_name').'\', \''.$request->input('page_name').'Controller@index\');';
 
        file_put_contents($routes_file, $routes_content);
-
+        
+       $layout_file = "../resources/views/layouts/app.blade.php";
+       $layout = file_get_contents($layout_file);
+       $page_name = $request->input('page_name'); 
+       $ul = '<ul class="nav navbar-nav">';
+       $new_layout = str_replace($ul, $ul."\n\t\t\t\t<li><a href=\"{{ url('$page_name') }}\">$page_name</a></li>", $layout);
+        
+       file_put_contents($layout_file, $new_layout);
+        
        return redirect("pages");
     }
 }

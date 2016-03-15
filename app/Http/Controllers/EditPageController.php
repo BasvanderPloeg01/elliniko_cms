@@ -8,19 +8,17 @@ use App\Http\Requests;
 class EditPageController extends Controller {
     public function __construct() {
         $this->middleware('auth');
-        
-        
     }
     
     public function index() {
         if (!isset($_GET['page'])) {
-        return redirect('pages');
-    }
-        return view('edit_page');
+            return redirect('pages');
+        }
         
+        return view('edit_page');
     }
     
-    public function add_page(Request $request) {
+    public function edit_page(Request $request) {
         if (empty($request->input('page_content'))) {
             // error handler
         }

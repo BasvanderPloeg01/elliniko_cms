@@ -16,7 +16,7 @@ Route::group(['middleware' => ['web']], function () {
     $this->post('password/reset', 'Auth\PasswordController@reset');
 
     $this->post('add_page', 'AddPageController@add_page');
-    $this->post('edit_page', 'EditPageController@add_page');
+    $this->post('edit_page', 'EditPageController@edit_page');
 
     Route::get('/dashboard', 'DashboardController@index');
     Route::get('/pages', 'PagesController@index');
