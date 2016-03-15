@@ -23,7 +23,7 @@ class AddPageController extends Controller {
 
        $page = $request->input('page_name');
        $file = fopen('../resources/views/pages/'.$page.'.blade.php', 'w') or die('Could not create page');
-       fwrite($file, '@extends(\'layouts.app\')
+       fwrite($file, '@extends(\'layouts.app\')i
 
 @section(\'content\')
 
@@ -62,6 +62,6 @@ Route::get(\'/'.$request->input('page_name').'\', \''.$request->input('page_name
 
        file_put_contents($routes_file, $routes_content);
 
-       return redirect($request->input('page_name'));
+       return redirect("pages");
     }
 }
