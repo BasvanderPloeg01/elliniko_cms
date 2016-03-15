@@ -16,10 +16,12 @@ Route::group(['middleware' => ['web']], function () {
     $this->post('password/reset', 'Auth\PasswordController@reset');
 
     $this->post('add_page', 'AddPageController@add_page');
+    $this->post('edit_page', 'EditPageController@add_page');
 
     Route::get('/dashboard', 'DashboardController@index');
     Route::get('/pages', 'PagesController@index');
     Route::get('/add_page', 'AddPageController@index');
-
+    Route::get('/edit_page', 'EditPageController@index');
+    
     Route::post('pages', 'PagesController@delete_page');
 });
