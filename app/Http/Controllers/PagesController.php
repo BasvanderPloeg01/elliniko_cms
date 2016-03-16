@@ -41,6 +41,7 @@ class PagesController extends Controller {
 	public function delete_page(Request $request) {
 		$pages = array();
 		$routes_file = '../app/Http/routes.php';
+		$layout_file = '../resources/views/layouts/app.blade.php';
 
 		if (!empty($request->all())) {
 			foreach ($request->all() as $res) {
@@ -69,11 +70,9 @@ class PagesController extends Controller {
 						$new_routes = str_replace($route, "", file_get_contents($routes_file));
 						file_put_contents($routes_file, $new_routes);
 
-//						$layout_file = "../resources/views/layouts/app.blade.php";
-//						$layout = file_get_contents($layout_file);
-//						
-//						$new_layout = str_replace("<li><a href=\"{{ url('$pages[$ii]') }}\">$pages[$ii]</a></li>", "", $layout);
-//						file_put_contents($layout, $new_layout);
+						$li = "<li><a href=\"{{ url('$pages[$ii]') }}\">$pages[$ii]</a></li>";
+						$new_layout = str_replace($li, "", file_get_contents($layout_file));
+						file_put_contents($layout_file, $new_layout);
 					}
 				}
 
