@@ -14,8 +14,10 @@ class EditPageController extends Controller {
         if (!isset($_GET['page'])) {
             return redirect('pages');
         }
-        
-        return view('edit_page');
+        $page = $_GET['page'];
+        $file = file_get_contents('../resources/views/pages/'.$page.'.blade.php', NULL, NULL, 46);
+        $file =  str_replace("@endsection", "", $file);
+        return view('edit_page', compact('file', 'page'));
     }
     
     public function edit_page(Request $request) {

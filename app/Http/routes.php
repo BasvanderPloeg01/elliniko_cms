@@ -4,6 +4,10 @@ Route::get('/', function () {
     return view('pages/welcome');
 });
 
+Route::get('/welcome', function () {
+    return view('pages/welcome');
+});
+
 Route::group(['middleware' => ['web']], function () {
     // Authentication Routes...
     Route::get('login', ['as' => 'auth.login', 'uses' => 'Auth\AuthController@showLoginForm']);
@@ -25,3 +29,4 @@ Route::group(['middleware' => ['web']], function () {
     
     Route::post('pages', 'PagesController@delete_page');
 });
+
