@@ -21,15 +21,17 @@ class AddPageController extends Controller {
            // error handler
        }
 
-       $page = $request->input('page_name');
-       $file = fopen('../resources/views/pages/'.$page.'.blade.php', 'w') or die('Could not create page');
-       fwrite($file, '@extends(\'layouts.app\')
+        $pageName = $request->input('page_name');
+        $pageName = str_replace(" ","_",$pageName);
+        $pageContent = $request->input('page_content');
+        $file = fopen('../resources/views/pages/'.$pageName.'.blade.php', 'w') or die('Could not create page');
+        fwrite($file, '@extends(\'layouts.app\')
 
 @section(\'content\')
 
 <div class="container content">
     <div class="row">'.
-        $request->input('page_content')
+        $pageContent
     .'</div>
 </div>
 
@@ -44,29 +46,28 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class '.$request->input('page_name').'Controller extends Controller {
+class '.$pageName.'Controller extends Controller {
     public function index() {
-		return view(\'pages/'.$request->input('page_name').'\');
+		return view(\'pages/'.$pageName.'\');
 	}
 }
 ';
 
-       $file = fopen('../app/Http/Controllers/'.$request->input('page_name').'Controller.php', 'w') or die('Could not create page');
+       $file = fopen('../app/Http/Controllers/'.$pageName.'Controller.php', 'w') or die('Could not create page');
        fwrite($file, $controller_content);
 
        $routes_file = '../app/Http/routes.php';
        $routes_content = file_get_contents($routes_file);
 
        $routes_content .= '
-Route::get(\'/'.$request->input('page_name').'\', \''.$request->input('page_name').'Controller@index\');';
+Route::get(\'/'.$pageName.'\', \''.$pageName.'Controller@index\');';
 
        file_put_contents($routes_file, $routes_content);
         
        $layout_file = "../resources/views/layouts/app.blade.php";
        $layout = file_get_contents($layout_file);
-       $page_name = $request->input('page_name'); 
        $ul = '<ul class="nav navbar-nav">';
-       $new_layout = str_replace($ul, $ul."\n\t\t\t\t<li><a href=\"{{ url('$page_name') }}\">$page_name</a></li>", $layout);
+       $new_layout = str_replace($ul, $ul."\n\t\t\t\t<li><a href=\"{{ url('$pageName') }}\">$pageName</a></li>", $layout);
         
        file_put_contents($layout_file, $new_layout);
         

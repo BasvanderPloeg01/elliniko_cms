@@ -29,4 +29,3 @@ Route::group(['middleware' => ['web']], function () {
     
     Route::post('pages', 'PagesController@delete_page');
 });
-
