@@ -17,7 +17,7 @@ class AddPageController extends Controller {
         foreach($layout_file as $line) {
             if (strstr($line, 'dropdown-menu')) {
                 $under_pos = strpos($line, '_');
-                $temp_file = substr($line, $under_pos, -4);
+                $temp_file = substr($line, $under_pos, -3);
                 $temp_file = str_replace('_', "", $temp_file);
                 
                 $categories[] = $temp_file;
@@ -35,6 +35,8 @@ class AddPageController extends Controller {
        }
 
         $pageName = $request->input('page_name');
+        $category = $request->input('category');
+        
         $pageName = str_replace(" ","_",$pageName);
         $pageContent = $request->input('page_content');
         $file = fopen('../resources/views/pages/'.$pageName.'.blade.php', 'w') or die('Could not create page');
@@ -79,10 +81,18 @@ Route::get(\'/'.$pageName.'\', \''.$pageName.'Controller@index\');';
         
        $layout_file = "../resources/views/layouts/app.blade.php";
        $layout = file_get_contents($layout_file);
-       $ul = '<ul class="nav navbar-nav">';
-       $new_layout = str_replace($ul, $ul."\n\t\t\t\t<li><a href=\"{{ url('$pageName') }}\">$pageName</a></li>", $layout);
         
-       file_put_contents($layout_file, $new_layout);
+       if ($category == 'None') {
+           $ul = '<ul class="nav navbar-nav">';
+           $new_layout = str_replace($ul, $ul."\n\t\t\t\t<li><a href=\"{{ url('$pageName') }}\">$pageName</a></li>", $layout);
+
+           file_put_contents($layout_file, $new_layout);     
+       } else {
+           $ul = '<ul class="dropdown-menu _'.$category.'">';
+           $new_layout = str_replace($ul, $ul."\n\t\t\t\t<li><a href=\"{{ url('$pageName') }}\">$pageName</a></li>", $layout);
+           
+           file_put_contents($layout_file, $new_layout);
+       }
         
        return redirect("pages");
     }

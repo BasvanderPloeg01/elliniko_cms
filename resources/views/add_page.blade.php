@@ -16,12 +16,12 @@
                         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </textarea><br>
                     <label for="sel1">Add to category:</label>
-                    <select class="form-control" id="sel1">
+                    <select class="form-control" id="sel1" name="category">
                         <option>None</option>
                         <?php 
                         if (!empty($categories)) {
                             foreach ($categories as $cat) { ?>
-                                 <option><?php echo $cat; ?></option>
+                                 <option><?php echo str_replace('"', "", $cat); ?></option>
                             <?php } 
                         } ?>
                     </select><br>
