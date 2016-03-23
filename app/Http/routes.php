@@ -27,6 +27,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/add_page', 'AddPageController@index');
     Route::get('/edit_page', 'EditPageController@index');
     Route::get('/add_categories','AddCategoriesController@index');
+    
+    Route::post('/add_categories', 'AddCategoriesController@add_category');
     Route::post('pages', 'PagesController@delete_page');
 });
 
