@@ -25,12 +25,14 @@ class AddCategoriesController extends Controller {
         <ul class="nav navbar-nav">
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">'.$request->input('c_name').'<span class="caret"></span></a>
-                <ul class="dropdown-menu '.$request->input('c_name').'">
+                <ul class="dropdown-menu _'.$request->input('c_name').'">
             
                 </ul>
             </li>';
         
         $new_layout = str_replace($ul, $new_c, file_get_contents($layout_file));
         file_put_contents($layout_file, $new_layout);
+        
+        return view('add_categories');
     }
 }

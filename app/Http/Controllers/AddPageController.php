@@ -11,7 +11,20 @@ class AddPageController extends Controller {
     }
     
     public function index() {
-        return view('add_page');
+        $categories = array();
+        $layout_file = file('../resources/views/layouts/app.blade.php');
+        
+        foreach($layout_file as $line) {
+            if (strstr($line, 'dropdown-menu')) {
+                $under_pos = strpos($line, '_');
+                $temp_file = substr($line, $under_pos, -4);
+                $temp_file = str_replace('_', "", $temp_file);
+                
+                $categories[] = $temp_file;
+            }
+        }
+        
+        return view('add_page', compact('categories'));
     }
 
     public function add_page(Request $request) {
