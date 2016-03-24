@@ -66,9 +66,16 @@
                 <li class="treeview">
                     <a href=""><i class="fa fa-file-text"></i> <span>Pagination</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="{{ url('add_categories') }}"><i class="fa fa-folder"></i>Add categories</a></li>
                         <li><a href="{{ url('pages') }}"><i class="fa fa-file"></i>Pages</a></li>
                         <li><a href="{{ url('add_page') }}"><i class="fa fa-plus"></i>Add page</a></li>
+                    </ul>
+                </li>
+                
+                <li class="treeview">
+                    <a href=""><i class="fa fa-folder"></i> <span>Categories</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ url('categories') }}"><i class="fa fa-folder-open-o"></i>Categories</a></li>
+                        <li><a href="{{ url('add_categories') }}"><i class="fa fa-plus"></i>Add categorie</a></li>
                     </ul>
                 </li>
             </ul><!-- /.sidebar-menu -->
