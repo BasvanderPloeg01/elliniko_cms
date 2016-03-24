@@ -75,7 +75,7 @@
                     <a href=""><i class="fa fa-folder"></i> <span>Categories</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="{{ url('categories') }}"><i class="fa fa-folder-open-o"></i>Categories</a></li>
-                        <li><a href="{{ url('add_categories') }}"><i class="fa fa-plus"></i>Add categorie</a></li>
+                        <li><a href="{{ url('add_categories') }}"><i class="fa fa-plus"></i>Add category</a></li>
                     </ul>
                 </li>
             </ul><!-- /.sidebar-menu -->

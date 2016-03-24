@@ -9,15 +9,25 @@
                         <a href="{{ url('add_page') }}">
                             <input type="button" class="btn btn-primary" value="add page"/>
                         </a>
-                        <input type="submit" class="btn btn-danger" value="delete page(s)"/>
+                        <?php if (!empty($files)) { ?>
+                            <input type="submit" class="btn btn-danger" value="delete page(s)"/>
+                        <?php } ?>
                     </h1>
                     <div class="list-group">
-                        <?php foreach($files as $file) { ?>
-                            <a href="{{ url('edit_page?page='.$file) }}" class="list-group-item">
-                                <?php echo $file; ?>
-                                <input name="delete_<?php echo $file; ?>" type="checkbox" class="pull-right"/>
-                                <input type="hidden" name="file'_<?php echo $file; ?>" value="file_<?php echo $file ?>">
-                            </a>
+                        <?php if (!empty($files)) { ?>
+                            <?php foreach($files as $file) { ?>
+                                <a href="{{ url('edit_page?page='.$file) }}" class="list-group-item">
+                                    <?php echo $file; ?>
+                                    <input name="delete_<?php echo $file; ?>" type="checkbox" class="pull-right"/>
+                                    <input type="hidden" name="file'_<?php echo $file; ?>" value="file_<?php echo $file ?>">
+                                </a>
+                            <?php } ?>
+                        <?php } else { ?>
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    No pages found
+                                </div>
+                            </div>
                         <?php } ?>
                     </div>
                 </form>

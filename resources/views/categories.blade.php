@@ -9,7 +9,9 @@
                         <a href="{{ url('add_categories') }}">
                             <input type="button" class="btn btn-primary" value="add category"/>
                         </a>
-                        <input type="submit" class="btn btn-danger" value="delete category"/>
+                        <?php if (!empty($categories)) { ?>
+                             <input type="submit" class="btn btn-danger" value="delete category"/>
+                        <?php } ?>
                     </h1>
                     <?php
                     if (!empty($categories)) {
@@ -20,7 +22,13 @@
                                 <input type="hidden" name="file_<?php echo str_replace('"', "", $cat); ?>" value="file_<?php echo str_replace('"', "", $cat); ?>">
                             </a>
                         <?php }
-                    } ?>
+                    } else { ?>
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                No categories found
+                            </div>
+                        </div>
+                    <?php } ?>
                 </form>
             </div>
         </div>
