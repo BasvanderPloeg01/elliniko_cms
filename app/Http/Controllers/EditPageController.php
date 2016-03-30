@@ -21,12 +21,21 @@ class EditPageController extends Controller {
     }
     
     public function edit_page(Request $request) {
+        if (isset($_GET['page'])) {
+            $page = $_GET['page'];
+            $file = fopen('../resources/views/pages/'.$page.'.blade.php', 'w') or die('Could not create page');
+        } else {
+            return redirect('pages');
+        }
+        
         if (empty($request->input('page_content'))) {
             // error handler
         }
-
-        $page = $_GET['page'];
-        $file = fopen('../resources/views/pages/'.$page.'.blade.php', 'w') or die('Could not create page');
+        
+        if (!empty($request->input('page_name'))) {
+            rename('../resources/views/pages/'.$page.'.blade.php', '../resources/views/pages/'.$request->input('page_content').'.blade.php');
+        }
+       
         fwrite($file, '@extends(\'layouts.app\')
 @section(\'content\')
 

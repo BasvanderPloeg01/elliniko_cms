@@ -279,6 +279,7 @@ a:focus {
   line-height: .9;
 }
 .main-header .logo {
+  position: fixed;
   -webkit-transition: width 0.3s ease-in-out;
   -o-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
@@ -357,7 +358,7 @@ a:focus {
  */
 .main-sidebar,
 .left-side {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   padding-top: 50px;
