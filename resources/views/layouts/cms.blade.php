@@ -15,6 +15,7 @@
 
     <link href="./css/stylesheet.css" rel="stylesheet">
     <link href="./css/skin-green.css" rel="stylesheet">
+    <link href="./css/gridster.css" rel="stylesheet">
 </head>
 <body class="hold-transition skin-green sidebar-mini">
 <!-- header -->
@@ -134,6 +135,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
 <script src="./js/app.min.js"></script>
+<script src="./js/gridster.js"></script>
 <script>tinymce.init({ selector:'textarea' });</script>
 </body>
 </html>
