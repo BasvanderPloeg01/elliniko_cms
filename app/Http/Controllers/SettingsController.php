@@ -12,6 +12,7 @@ class SettingsController extends Controller {
 	}
 
 	public function index() {
-		return view('settings');
+		$users = SettingsModel::get_users();
+		return view('settings', compact('users'));
 	}
 }
