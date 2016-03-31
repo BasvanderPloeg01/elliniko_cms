@@ -119,6 +119,7 @@
             <ul class="sidebar-menu">
                 <li class="header">Menu</li>
                 <li><a href="{{ url('dashboard') }}"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
+                <li><a href="{{ url('settings') }}"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
                 <li class="treeview">
                     <a href=""><i class="fa fa-file-text"></i> <span>Pagination</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">

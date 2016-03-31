@@ -28,10 +28,13 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/edit_page', 'EditPageController@index');
     Route::get('/categories','CategoriesController@index');
     Route::get('/add_categories','AddCategoriesController@index');
+    Route::get('/settings', 'SettingsController@index');
     
     Route::post('/categories', 'CategoriesController@delete_category');
     Route::post('/add_categories', 'AddCategoriesController@add_category');
     Route::post('pages', 'PagesController@delete_page');
 });
+
+
 
 
