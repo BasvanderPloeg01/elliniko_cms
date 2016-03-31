@@ -6,13 +6,13 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\SettingsModel;
 
-class SettingsController extends Controller {
+class UsermanagementController extends Controller {
 	public function __construct() {
 		$this->middleware('auth');
 	}
 
 	public function index() {
 		$users = SettingsModel::get_users();
-		return view('settings', compact('users'));
+		return view('usermanagement', compact('users'));
 	}
 }

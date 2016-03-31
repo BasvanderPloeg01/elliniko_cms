@@ -16,15 +16,7 @@
     <link href="./css/stylesheet.css" rel="stylesheet">
     <link href="./css/skin-green.css" rel="stylesheet">
     <link href="./css/gridster.css" rel="stylesheet">
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
-
-    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/i18n/defaults-*.min.js"></script>
+    <link href="./css/bootstrap-select.css" rel="stylesheet">
 
 </head>
 <body class="hold-transition skin-green sidebar-mini">
@@ -129,7 +121,12 @@
             <ul class="sidebar-menu">
                 <li class="header">Menu</li>
                 <li><a href="{{ url('dashboard') }}"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
-                <li><a href="{{ url('settings') }}"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
+                <li class="treeview">
+                    <a href=""><i class="fa fa-cog"></i> <span>Settings</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ url('usermanagement') }}"><i class="fa fa-user"></i>usermanagement</a></li>
+                    </ul>
+                </li>
                 <li class="treeview">
                     <a href=""><i class="fa fa-file-text"></i> <span>Pagination</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
@@ -202,6 +199,7 @@
 <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
 <script src="./js/app.min.js"></script>
 <script src="./js/gridster.js"></script>
+<script src="./js/bootstrap-select.js"></script>
 <script>tinymce.init({ selector:'textarea' });</script>
 </body>
 </html>
