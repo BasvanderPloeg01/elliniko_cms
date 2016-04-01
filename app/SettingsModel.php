@@ -11,4 +11,12 @@ class SettingsModel extends Model {
 		$users = DB::table('users')->get();
 		return $users;
 	}
+	
+	public static function change_role($username, $admin) {
+		if ($admin) {
+			DB::update('UPDATE users SET admin = 1 where name = ?', [$username]);
+		} else if (!$admin) {
+			DB::update('UPDATE users SET admin = 0 where name = ?', [$username]);
+		}
+	}
 }

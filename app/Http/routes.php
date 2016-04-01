@@ -32,7 +32,8 @@ Route::group(['middleware' => ['web']], function () {
     
     Route::post('/categories', 'CategoriesController@delete_category');
     Route::post('/add_categories', 'AddCategoriesController@add_category');
-    Route::post('pages', 'PagesController@delete_page');
+    Route::post('/pages', 'PagesController@delete_page');
+    Route::post('/usermanagement', 'UsermanagementController@change_role');
 });
 
 

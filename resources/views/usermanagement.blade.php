@@ -15,19 +15,29 @@
                             <th>Username</th>
                             <th>Email</th>
                             <th>Role</th>
+                            <?php if ($admin) { ?>
+                                <th>Is Admin</th>
+                            <?php } ?>
                         </tr>
                         </thead>
                         <tbody>
-                        <?php foreach($users as $user) { ?>
-                            <tr>
-                                <th><?= $user->id ?></th>
-                                <td><?= $user->name ?></td>
-                                <td><?= $user->email ?></td>
-                                <td><?= ($user->admin) ? 'Admin' : 'Moderator' ?></td>
-                            </tr>
-                        <?php } ?>
+                            <?php foreach($users as $user) { ?>
+                                <tr>
+                                    <th><?= $user->id ?></th>
+                                    <td><?= $user->name ?></td>
+                                    <td><?= $user->email ?></td>
+                                    <td><?= ($user->admin) ? 'Admin' : 'Moderator' ?></td>
+                                    <?php if ($admin) { ?>
+                                        <td><input type="checkbox" name="isadmin_<?= $user->name ?>"
+                                            <?= ($user->admin) ? 'checked' : '' ?> /></td>
+                                    <?php } ?>
+                                </tr>
+                            <?php } ?>
                         </tbody>
                     </table>
+                    <?php if ($admin) { ?>
+                        <input type="submit" class="btn btn-primary" value="save" />
+                    <?php } ?>
                 </form>
             </div>
         </div>
