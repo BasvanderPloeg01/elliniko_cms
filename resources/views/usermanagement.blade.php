@@ -37,6 +37,7 @@
                     </table>
                     <?php if ($admin) { ?>
                         <input type="submit" class="btn btn-primary" value="save" />
+                        <a href="{{ url('add_moderator') }}"><input type="button" class="btn btn-primary" value="add moderator" /></a>
                     <?php } ?>
                 </form>
             </div>

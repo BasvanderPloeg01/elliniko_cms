@@ -29,11 +29,13 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/categories','CategoriesController@index');
     Route::get('/add_categories','AddCategoriesController@index');
     Route::get('/usermanagement', 'UsermanagementController@index');
+    Route::get('/add_moderator', 'AddModeratorController@index');
     
     Route::post('/categories', 'CategoriesController@delete_category');
     Route::post('/add_categories', 'AddCategoriesController@add_category');
     Route::post('/pages', 'PagesController@delete_page');
     Route::post('/usermanagement', 'UsermanagementController@change_role');
+    Route::post('/add_moderator', 'AddModeratorController@add_moderator');
 });
 
 
