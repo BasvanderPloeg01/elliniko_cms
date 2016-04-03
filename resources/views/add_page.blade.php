@@ -8,7 +8,7 @@
                 <form method="post" role="form">
                     <label>Page name!</label><input type="text" class="form-control" name="page_name" placeholder="example: Contact" required="true"/><br>
                     <label>Page Content!</label>
-                    <textarea rows="10" name="page_content" title="content" required="true">
+                    <textarea rows="10" class="tinymce" name="page_content" title="content" required="true">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

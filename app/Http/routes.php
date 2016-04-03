@@ -31,12 +31,14 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/usermanagement', 'UsermanagementController@index');
     Route::get('/add_moderator', 'AddModeratorController@index');
     Route::get('/code_editor', 'CodeEditorController@index');
+    Route::get('/edit_code', 'EditCodeController@index');
     
     Route::post('/categories', 'CategoriesController@delete_category');
     Route::post('/add_categories', 'AddCategoriesController@add_category');
     Route::post('/pages', 'PagesController@delete_page');
     Route::post('/usermanagement', 'UsermanagementController@change_role');
     Route::post('/add_moderator', 'AddModeratorController@add_moderator');
+    Route::post('/edit_code', 'EditCodeController@edit');
 });
 
 

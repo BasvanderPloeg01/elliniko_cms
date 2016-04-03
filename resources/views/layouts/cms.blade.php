@@ -16,6 +16,7 @@
     <link href="./css/stylesheet.css" rel="stylesheet">
     <link href="./css/skin-green.css" rel="stylesheet">
     <link href="./css/gridster.css" rel="stylesheet">
+    <link href="./css/codemirror.css" rel="stylesheet">
     <link href="./css/bootstrap-select.css" rel="stylesheet">
 
 </head>
@@ -145,7 +146,16 @@
 <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
 <script src="./js/app.min.js"></script>
 <script src="./js/gridster.js"></script>
+<script src="./js/codemirror.js"></script>
+<script src="./js/modes.js"></script>
 <script src="./js/bootstrap-select.js"></script>
-<script>tinymce.init({ selector:'textarea' });</script>
+<script>tinymce.init({ mode: "specific_textareas", editor_selector:'tinymce' });</script>
+<script>
+    var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
+        styleActiveLine: true,
+        lineNumbers: true,
+        readOnly: false,
+    });
+</script>
 </body>
 </html>
