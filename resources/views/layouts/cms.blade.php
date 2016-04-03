@@ -40,49 +40,6 @@
             <!-- Navbar Right Menu -->
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
-                    <!-- Messages: style can be found in dropdown.less-->
-                    <!--TODO: remove style Notifications Menu-->
-                    <!-- User Account Menu -->
-                    {{--<li class="dropdown user user-menu">--}}
-                        {{--<!-- Menu Toggle Button -->--}}
-                        {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown">--}}
-                            {{--<!-- The user image in the navbar-->--}}
-                            {{--<img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Mark_Zuckerberg_at_the_37th_G8_Summit_in_Deauville_018_v1.jpg" class="user-image" alt="User Image">--}}
-                            {{--<!-- hidden-xs hides the username on small devices so only the image appears. -->--}}
-                            {{--<span><i class="fa fa-user"></i></span>--}}
-                        {{--</a>--}}
-                        {{--<ul class="dropdown-menu">--}}
-                            {{--<!-- The user image in the menu -->--}}
-                            {{--<li class="user-header">--}}
-                                {{--<img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Mark_Zuckerberg_at_the_37th_G8_Summit_in_Deauville_018_v1.jpg" class="img-circle" alt="User Image">--}}
-                                {{--<p>--}}
-                                    {{--<small>Join Date</small>--}}
-                                {{--</p>--}}
-                            {{--</li>--}}
-                            {{--<!-- Menu Body -->--}}
-                            {{--<li class="user-body">--}}
-                                {{--<div class="col-xs-4 text-center">--}}
-                                    {{--<a href="#">Followers</a>--}}
-                                {{--</div>--}}
-                                {{--<div class="col-xs-4 text-center">--}}
-                                    {{--<a href="#">Unfollow</a>--}}
-                                {{--</div>--}}
-                                {{--<div class="col-xs-4 text-center">--}}
-                                    {{--<a href="#">Friends</a>--}}
-                                {{--</div>--}}
-                            {{--</li>--}}
-                            {{--<!-- Menu Footer-->--}}
-                            {{--<li class="user-footer">--}}
-                                {{--<div class="pull-left">--}}
-                                    {{--<a href="" class="btn btn-success">Profile</a>--}}
-                                {{--</div>--}}
-                                {{--<div class="pull-right">--}}
-
-                                {{--</div>--}}
-                            {{--</li>--}}
-                        {{--</ul>--}}
-                    {{--</li>--}}
-                    <!-- Control Sidebar Toggle Button -->
                     <li>
                         <a href="#" data-toggle="control-sidebar"><i class="fa fa-cog"></i><span class="label label-success"></span></a>
                     </li>
@@ -94,19 +51,6 @@
     <aside class="main-sidebar">
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
-            <!-- Sidebar user panel (optional) -->
-            {{--<div class="user-panel">--}}
-                {{--<div class="pull-left image">--}}
-                    {{--<img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Mark_Zuckerberg_at_the_37th_G8_Summit_in_Deauville_018_v1.jpg" class="img-circle" alt="User Image">--}}
-                {{--</div>--}}
-                {{--<div class="pull-left info">--}}
-                    {{--<p>Username</p>--}}
-                    {{--<!-- Status -->--}}
-                    {{--<a href="#"><i class="fa fa-circle text-success"></i> Online</a>--}}
-                    {{--<p>Level: 200</p>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-
             <!-- search form (Optional) -->
             <form action="#" method="get" class="sidebar-form">
                 <div class="input-group">
@@ -121,6 +65,7 @@
             <ul class="sidebar-menu">
                 <li class="header">Menu</li>
                 <li><a href="{{ url('dashboard') }}"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
+                <li><a href="{{ url('code_editor') }}"><i class="fa fa-file-code-o"></i> <span>Code editor</span></a></li>
                 <li class="treeview">
                     <a href=""><i class="fa fa-cog"></i> <span>Settings</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
