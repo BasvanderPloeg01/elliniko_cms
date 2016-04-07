@@ -12,15 +12,15 @@
 
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="./css/theme.css" rel="stylesheet">
     <link href="./css/stylesheet.css" rel="stylesheet">
     <link href="./css/skin-green.css" rel="stylesheet">
-    <link href="./css/gridster.css" rel="stylesheet">
     <link href="./css/codemirror.css" rel="stylesheet">
     <link href="./css/bootstrap-select.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 </head>
-<body class="hold-transition skin-green sidebar-mini">
+<body class="hold-transition skin-green sidebar-mini edit">
 <!-- header -->
 <div class="wrapper">
     <!-- Main Header -->
@@ -142,10 +142,12 @@
 </div>
 <!-- script references -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.10.2/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
 <script src="./js/app.min.js"></script>
-<script src="./js/gridster.js"></script>
+<script src="./js/app.js"></script>
 <script src="./js/codemirror.js"></script>
 <script src="./js/modes.js"></script>
 <script src="./js/bootstrap-select.js"></script>
