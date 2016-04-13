@@ -36,16 +36,7 @@ class EditPageController extends Controller {
             rename('../resources/views/pages/'.$page.'.blade.php', '../resources/views/pages/'.$request->input('page_content').'.blade.php');
         }
        
-        fwrite($file, '@extends(\'layouts.app\')
-@section(\'content\')
-
-<div class="container content">
-    <div class="row">'.
-            $request->input('page_content')
-            .'</div>
-</div>
-
-@endsection');
+        fwrite($file, '@extends(\'layouts.app\') @section(\'content\')' . $request->input('page_content') . '@endsection');
 
         return redirect($page);
     }

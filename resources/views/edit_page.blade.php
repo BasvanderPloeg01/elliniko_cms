@@ -1,12 +1,12 @@
 @extends('layouts.cms')
 
 @section('content')
-<div class="navbar navbar-inverse navbar-htmleditor">
-    <div class="navbar-header">
+<div>
+    <div>
         <button data-target="navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button"><span
                     class="glyphicon-bar"></span> <span class="glyphicon-bar"></span> <span class="glyphicon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">Htmleditor</a></div>
+    </div>
     <div class="collapse navbar-collapse">
         <ul class="nav" id="menu-htmleditor">
             <li>
@@ -35,7 +35,7 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="">
+        <div class="col-lg-3">
             <div class="sidebar-nav">
                 <ul class="nav nav-list ">
                     <li class="nav-header"><i class="fa fa fa-th"> </i>&nbsp; Grid System</li>
@@ -267,7 +267,7 @@
                 </ul>
             </div>
         </div>
-        <div class="htmlpage"></div>
+        <div class="htmlpage col-lg-9"></div>
     </div>
     <div class="modal fade" id="download" tabindex="-1" role="dialog" aria-labelledby="download" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -276,16 +276,18 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                 aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title"><i class='fa fa-save'></i>&nbsp;Save as </h4></div>
-                <div class="modal-body" id='sourceCode'><textarea id="src" rows="10"></textarea> <textarea id="model"
-                                                                                                           rows="10"
-                                                                                                           class="form-control"></textarea>
+                <form method="post" role="form">
+                <div class="modal-body" id='sourceCode'>
+                    <textarea id="src" rows="10" name="page_content"></textarea> 
+                    <textarea id="model" rows="10" class="form-control" ></textarea>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal"><i class='fa fa-close'></i>&nbsp;Close
                     </button>
-                    <button type="button" class="btn btn-success" id="srcSave"><i class='fa fa-save'></i>&nbsp;Save
-                    </button>
+                    <input type="hidden" name="_Token" value="{{ csrf_token() }}">
+                    <input type="submit" class="btn btn-success" id="srcSave" value="&nbsp;Save"/>
                 </div>
+                </form>
             </div>
         </div>
     </div>
@@ -826,22 +828,4 @@
             <div class="container"></div>
         </div>
     </div>
-
-<!--<div  class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>Edit <?php echo $page ?></h1>
-
-            <form method="post" role="form">
-                <label>Page Content!</label>
-                <textarea rows="10" class="tinymce" name="page_content" title="content" required="true">
-                    <?php echo $file ?>
-                </textarea><br>
-                <input type="hidden" name="_Token" value="{{ csrf_token() }}">
-                <input type="submit" class="btn btn-primary" value="edit page"/>
-            </form>
-        </div>
-    </div>
-</div>
-
 @endsection
