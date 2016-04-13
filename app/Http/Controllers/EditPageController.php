@@ -38,6 +38,10 @@ class EditPageController extends Controller {
        
         fwrite($file, '@extends(\'layouts.app\') @section(\'content\')' . $request->input('page_content') . '@endsection');
 
+        $file = fopen('../resources/views/'.$page.'.txt', 'w') or die('Could not create page');
+        $txt = $request->input('container_content');
+        fwrite($file, $txt);
+        fclose($file);
         return redirect($page);
     }
 }

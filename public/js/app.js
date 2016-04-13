@@ -579,7 +579,7 @@ function removeElm() {
         var b = $(this).parent().css('border');
         $(this).parent().css('border', '2px solid red');
 
-        if (confirm("Sei sicuro di eliminare la parte selezionata ?")) {
+        if (confirm("Weet u het zeker?")) {
             e.preventDefault();
             $(this).parent().remove();
 
@@ -760,7 +760,7 @@ $(document).ready(function () {
         }
 
         function errorHandler() {
-            alert('errore caricamento');
+            alert('Error');
         }
 
         function progressHandlingFunction(e) {

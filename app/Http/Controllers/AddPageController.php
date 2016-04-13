@@ -94,6 +94,10 @@ Route::get(\'/'.$pageName.'\', \''.$pageName.'Controller@index\');';
            file_put_contents($layout_file, $new_layout);
        }
         
+        $file = fopen('../resources/views/'.$pageName.'.txt', 'w') or die('Could not create page');
+        $txt = $request->input('container_content');
+        fwrite($file, $txt);
+        fclose($file);
        return redirect("pages");
     }
 }

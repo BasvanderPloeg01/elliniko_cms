@@ -267,7 +267,12 @@
                 </ul>
             </div>
         </div>
-        <div class="htmlpage col-lg-9"></div>
+        <div class="htmlpage col-lg-9">
+            <?php
+            $myfile = file_get_contents('../resources/views/' . $_GET["page"] . ".txt", "r");
+            echo $myfile;
+            ?>
+        </div>
     </div>
     <div class="modal fade" id="download" tabindex="-1" role="dialog" aria-labelledby="download" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -277,10 +282,8 @@
                                 aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title"><i class='fa fa-save'></i>&nbsp;Save as </h4></div>
                 <form method="post" role="form">
-                <div class="modal-body" id='sourceCode'>
-                    <textarea id="src" rows="10" name="page_content"></textarea> 
-                    <textarea id="model" rows="10" class="form-control" ></textarea>
-                </div>
+                    <textarea id="src" rows="10" name="page_content" style="display: none"></textarea> 
+                    <textarea id="model" rows="10" class="form-control" name="container_content" style="display: none"></textarea>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal"><i class='fa fa-close'></i>&nbsp;Close
                     </button>
