@@ -35,8 +35,8 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-lg-3">
-            <div class="sidebar-nav">
+        <div class="col-lg-3 sidebar-nav">
+            <div>
                 <ul class="nav nav-list ">
                     <li class="nav-header"><i class="fa fa fa-th"> </i>&nbsp; Grid System</li>
                     <li class="rows" id="estRows">
@@ -262,6 +262,43 @@
                                 <div class="element-desc">Code</div>
                             </div>
                             <div class="view"> i'm html code, change me</div>
+                        </div>
+                        <div class="box box-element" data-type="photo-role">
+                            <a href="#close" class="remove btn btn-danger btn-xs"><i class="glyphicon glyphicon-remove">
+                                </i></a> 
+                            <a class="drag btn btn-default btn-xs"><i class="glyphicon glyphicon-move"></i></a>
+                            <span class="configuration"> <a class="btn btn-xs btn-warning settings" href="#">
+                                    <i class="fa fa-gear"></i></a> </span>
+                            <div class="preview"><i class="fa">< ></i>
+
+                                <div class="element-desc">Code</div>
+                            </div>
+                            <div class="view"><div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                                    </ol>
+
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="item active">
+                                            <img src="img_chania.jpg" alt="Chania">
+                                        </div>
+                                    </div>
+
+                                    <!-- Left and right controls -->
+                                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div></div>
                         </div>
                     </li>
                 </ul>

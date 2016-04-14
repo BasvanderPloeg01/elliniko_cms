@@ -65,6 +65,9 @@ class PagesController extends Controller {
 						// Removes the controller
 						unlink($controller);
 
+						// Removes the edit .txt
+						unlink('../resources/views/'.$pages[$ii].'.txt');
+                        
 						// Removes the route from Routes.php
 						$route = "Route::get('/$pages[$ii]', '$pages[$ii]Controller@index');";
 						$new_routes = str_replace($route, "", file_get_contents($routes_file));

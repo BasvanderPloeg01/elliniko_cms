@@ -177,11 +177,13 @@ function _initt() {
 
     $("#edit").click(function () {
         $('#add').hide();
+        $('nav-header').hide();
         $("body").removeClass("devpreview sourcepreview");
         $("body").removeClass("tablet mobile");
         $("body").addClass("edit");
         removeMenuClasses();
         $(this).addClass("active");
+        $('.sidebar-nav').show();
         return false
     });
 
@@ -199,6 +201,7 @@ function _initt() {
         $("body").addClass("devpreview sourcepreview");
         removeMenuClasses();
         $(this).addClass("active");
+        $('.sidebar-nav').hide();
         return false
     });
 
