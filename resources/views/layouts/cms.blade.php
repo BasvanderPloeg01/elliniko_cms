@@ -72,6 +72,7 @@
                     <ul class="treeview-menu">
                         <li><a href="{{ url('usermanagement') }}"><i class="fa fa-users"></i>User management</a></li>
                         <li><a href="{{ url('add_moderator') }}"><i class="fa fa-user"></i>Add moderator</a></li>
+                        <li><a href="{{ url('edit_title') }}"><i class="fa fa-list-alt"></i>Edit website title</a></li>
                     </ul>
                 </li>
                 <li class="treeview">

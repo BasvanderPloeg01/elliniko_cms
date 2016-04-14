@@ -32,6 +32,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/add_moderator', 'AddModeratorController@index');
     Route::get('/code_editor', 'CodeEditorController@index');
     Route::get('/edit_code', 'EditCodeController@index');
+    Route::get('/edit_title', 'EditTitleController@index');
     
     Route::post('/categories', 'CategoriesController@delete_category');
     Route::post('/add_categories', 'AddCategoriesController@add_category');
@@ -39,6 +40,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('/usermanagement', 'UsermanagementController@change_role');
     Route::post('/add_moderator', 'AddModeratorController@add_moderator');
     Route::post('/edit_code', 'EditCodeController@edit');
+    Route::post('/edit_title', 'EditTitleController@edit_title');
 });
 
 
