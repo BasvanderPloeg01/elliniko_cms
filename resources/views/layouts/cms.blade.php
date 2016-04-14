@@ -66,7 +66,7 @@
             <ul class="sidebar-menu">
                 <li class="header">Menu</li>
                 <li><a href="{{ url('dashboard') }}"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
-                <li><a href="{{ url('code_editor') }}"><i class="fa fa-file-code-o"></i> <span>Code editor</span></a></li>
+                <li><a href="{{ url('stylesheets') }}"><i class="fa fa-file-code-o"></i> <span>Stylesheets</span></a></li>
                 <li class="treeview">
                     <a href=""><i class="fa fa-cog"></i> <span>Settings</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">

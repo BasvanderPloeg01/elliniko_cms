@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\SettingsModel;
 
-class CodeEditorController extends Controller {
+class StylesheetsController extends Controller {
 	public function __construct() {
 		$this->middleware('auth');
 	}
@@ -32,6 +32,6 @@ class CodeEditorController extends Controller {
 			$CSSfiles[] = $file;
 		}
 		
-		return view('code_editor', compact('CSSfiles'));
+		return view('stylesheets', compact('CSSfiles'));
 	}
 }

@@ -30,7 +30,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/add_categories','AddCategoriesController@index');
     Route::get('/usermanagement', 'UsermanagementController@index');
     Route::get('/add_moderator', 'AddModeratorController@index');
-    Route::get('/code_editor', 'CodeEditorController@index');
+    Route::get('/stylesheets', 'StylesheetsController@index');
     Route::get('/edit_code', 'EditCodeController@index');
     Route::get('/edit_title', 'EditTitleController@index');
     
