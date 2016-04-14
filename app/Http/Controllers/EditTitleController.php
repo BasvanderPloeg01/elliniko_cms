@@ -43,7 +43,7 @@ class EditTitleController extends Controller {
 
 		$file_layout = file_get_contents($layout);
 
-		$new_layout = str_replace($header, "\t\t<a class='navbar-brand' href='#'>$new_header</a>\n", $file_layout);
+		$new_layout = str_replace($header, "\t\t\t<a class='navbar-brand' href='#'>$new_header</a>\n", $file_layout);
 		file_put_contents($layout, $new_layout);
 		
 		return redirect('edit_title');
